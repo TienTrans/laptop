@@ -1,104 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm</title>
-    <link rel="stylesheet" href="./asset/fonts/fontawesome-free-5.15.1-web/css/all.css">
-    <link rel="stylesheet" href="./asset/css/base.css">
-    <link rel="stylesheet" href="./asset/css/header-nav.css">
-    <link rel="stylesheet" href="./asset/css/sanpham.css">
-</head>
-<body>
-    <section class="page">
-        <header class="header">
-            <section class="grid">
-                <section class="header-wrap">
-                    <!-- Logo -->
-                    <section class="header__logo">
-                        <a href="index.html" class="logo-link">Logo</a>
-                    </section>
-        
-                    <!-- Search bar -->
-                    <section class="header__search">
-                        <section class="search-wrap">
-                            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm">
-                            <button class="search-btn">
-                                <i class="search-btn-icon fas fa-search"></i>
-                            </button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sản phẩm</title>
+        <link
+            rel="stylesheet"
+            href="./asset/fonts/fontawesome-free-5.15.1-web/css/all.css"
+        />
+        <link rel="stylesheet" href="./asset/css/base.css" />
+        <link rel="stylesheet" href="./asset/css/header-nav.css" />
+        <link rel="stylesheet" href="./asset/css/sanpham.css" />
+    </head>
+    <body>
+        <section class="page">
+            <header class="header">
+                <section class="grid">
+                    <section class="header-wrap">
+                        <!-- Logo -->
+                        <section class="header__logo">
+                            <a href="index.html" class="logo-link">Logo</a>
                         </section>
-                    </section>
-        
-                    <!-- Cart -->
-                    <section class="header__cart">
-                        <section class="cart-wrap">
-                            <a href="auth_cart.html" class="cart-link">
-                                <i class="cart-icon fas fa-shopping-cart"></i>
-                                <small class="cart-notice">0</small>
-                            </a>
+
+                        <!-- Search bar -->
+                        <section class="header__search">
+                            <section class="search-wrap">
+                                <input
+                                    type="text"
+                                    class="search-input"
+                                    placeholder="Tìm kiếm sản phẩm"
+                                />
+                                <button class="search-btn">
+                                    <i
+                                        class="search-btn-icon fas fa-search"
+                                    ></i>
+                                </button>
+                            </section>
                         </section>
+
+                        <!-- Cart -->
+                        <section class="header__cart">
+                            <section class="cart-wrap">
+                                <a href="auth_cart.html" class="cart-link">
+                                    <i
+                                        class="cart-icon fas fa-shopping-cart"
+                                    ></i>
+                                    <small class="cart-notice">0</small>
+                                </a>
+                            </section>
+                        </section>
+                        <label for="menu-checkbox" class="show-menu-btn">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </label>
                     </section>
-                    <label for="menu-checkbox" class="show-menu-btn">
-                        <i class="fas fa-ellipsis-h"></i>
+                </section>
+            </header>
+            <nav class="navbar">
+                <input type="checkbox" name="" id="menu-checkbox" />
+                <ul class="navbar__menu">
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-item-link"
+                            >Trang chủ</a
+                        >
+                    </li>
+                    <li class="menu-item item-drop menu-item-active">
+                        <a href="#" class="menu-item-link">Sản phẩm</a>
+                        <ul class="menu-drop">
+                            <a href="hang.html" id="Dell">Dell</a>
+                            <a href="hang.html" id="Asus">Asus</a>
+                            <a href="hang.html" id="HP">HP</a>
+                            <a href="hang.html" id="MSI">MSI</a>
+                            <a href="hang.html" id="Lenovo">Lenovo</a>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="lienhe.html" class="menu-item-link">Liên hệ</a>
+                    </li>
+                    <li class="menu-item" id="btnProfile">
+                        <a href="#" class="menu-item-link">Giới thiệu</a>
+                    </li>
+                    <li class="menu-item" id="btnDangnhap">
+                        <a href="auth_form.html" class="menu-item-link"
+                            >Đăng nhập</a
+                        >
+                    </li>
+                    <li
+                        class="menu-item"
+                        id="btnLogout"
+                        onclick="logout()"
+                        style="display: none"
+                    >
+                        <a href="index.html" class="menu-item-link"
+                            >Đăng xuất</a
+                        >
+                    </li>
+                    <label for="menu-checkbox" class="hide-menu-btn">
+                        <i class="fas fa-times"></i>
                     </label>
-                </section>
-            </section>
-        </header>
-        <nav class="navbar">
-            <input type="checkbox" name="" id="menu-checkbox">
-            <ul class="navbar__menu">
-                <li class="menu-item">
-                    <a href="index.html" class="menu-item-link">Trang chủ</a>
-                </li>
-                <li class="menu-item item-drop menu-item-active">
-                    <a href="#" class="menu-item-link">Sản phẩm</a>
-                    <ul class="menu-drop">
-                        <a href="hang.html" id="Dell">Dell</a>
-                        <a href="hang.html" id="Asus">Asus</a>
-                        <a href="hang.html" id="HP">HP</a>
-                        <a href="hang.html" id="MSI">MSI</a>
-                        <a href="hang.html" id="Lenovo">Lenovo</a>
-                    </ul>
-                </li>
-                <li class="menu-item">
-                    <a href="lienhe.html" class="menu-item-link">Liên hệ</a>
-                </li>
-                <li class="menu-item" id="btnProfile">
-                    <a href="#" class="menu-item-link">Giới thiệu</a>
-                </li>
-                <li class="menu-item" id="btnDangnhap">
-                    <a href="auth_form.html" class="menu-item-link">Đăng nhập</a>
-                </li>
-                <li class="menu-item" id="btnLogout" onclick="logout()" style="display: none;">
-                    <a href="index.html" class="menu-item-link">Đăng xuất</a>
-                </li>
-                <label for="menu-checkbox" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
 
-        <section class="content">
-            <section class="grid grid1">
-                <!-- CSS từ đây đi nhé -->
-                <section class="content-wrap">
+            <section class="content">
+                <section class="grid grid1">
+                    <!-- CSS từ đây đi nhé -->
+                    <section class="content-wrap">
+                        <h3 class="item-title">
+                            Laptop Dell Inspiron 5593A (P90F002N93A) (i7
+                            1065G7/8GB RAM/512GB SSD/MX230 4G/15.6 inch FHD/Win
+                            10/Bạc)
+                        </h3>
+                        <section class="item-wrap">
+                            <section class="item-img">
+                                <img src="./asset/img/55649_hp_15s__5_.jpg" />
+                            </section>
+                            <section class="item-desc">
+                                <h3>Thông số kỹ thuật:</h3>
+                                <p class="desc">
+                                    CPU: Intel Core i7 1065G7(upto 3.8Ghz/ 8MB
+                                    Cache)
+                                </p>
+                                <p class="desc">
+                                    RAM: 8GB DDR4 2666Mhz (8GB *1)
+                                </p>
+                                <p class="desc">
+                                    Ổ cứng: 512GB SSD PCIe (M.2 2280)
+                                </p>
+                                <p class="desc">
+                                    VGA: Nvidia Geforce MX230 4G DDR5
+                                </p>
+                                <p class="desc">
+                                    Màn hình: 15.6” FHD (1920 * 1080) Anti-Glare
+                                    LED-Backlit
+                                </p>
+                                <p class="desc">
+                                    HĐH: Windows 10 Home Single Language 64-bit
+                                </p>
+                                <p class="desc">Màu: Bạc</p>
+                                <p class="desc">Cân nặng: 1.9Kg</p>
+                                <p class="desc">Pin: 3 Cell (42wh)</p>
+                                <section class="price-wrap">
+                                    Giá: <span class="price">23.289.000đ</span>
+                                </section>
+                                <b
+                                    >Bảo hành:
+                                    <span class="warranty">12 Tháng</span></b
+                                >
+                                <section class="btn-wrap">
+                                    <button class="btn btn-add">
+                                        Thêm vào giỏ hàng</button
+                                    ><button class="btn btn-buy">
+                                        Đặt mua ngay
+                                    </button>
+                                </section>
+                            </section>
+                        </section>
+                        '; } ?>
+                    </section>
                 </section>
             </section>
+
+            <footer class="footer">
+                <section class="grid">
+                    <section class="footer-wrap">
+                        <h3>© 2020 Tập đoàn Logo - Logo Group</h3>
+                        <p>Địa chỉ: Hoàng Liệt - Hoàng Mai - Hà Nội</p>
+                        <p>Điện thoại: 0986xxxxxx</p>
+                        <p>Email: thudientu@logo.com.vn</p>
+                    </section>
+                </section>
+            </footer>
         </section>
-
-        <footer class="footer">
-            <section class="grid">
-                <section class="footer-wrap">
-                    <h3>© 2020 Tập đoàn Logo - Logo Group</h3>
-                    <p>Địa chỉ: Hoàng Liệt - Hoàng Mai - Hà Nội</p>
-                    <p>Điện thoại: 0986xxxxxx</p>
-                    <p>Email: thudientu@logo.com.vn</p>
-                </section>
-            </section>
-        </footer>
-    </section>
-    <script src="./asset/js/index_currentuser.js"></script>
-    <script src="./asset/js/sanpham.js"></script>
-    <script src="./asset/js/index_control.js"></script>
-</body>
+        <script src="./asset/js/index_currentuser.js"></script>
+        <script src="./asset/js/sanpham.js"></script>
+        <script src="./asset/js/index_control.js"></script>
+    </body>
 </html>
